@@ -1,39 +1,24 @@
-#include<stdio.h>
-int main()
-{
-int n1,n2,i,j=0;
-printf("enter the size of 1st array:");
-scanf("%d",&n1);
-int a[n1];
-printf("enter the numbers of 1st array:");
-for(i=0;i<n1;i++)
-{
-scanf("%d",&a[i]);
-}
-printf("enter the size of 2nd array:");
+#include <stdio.h>
 
-scanf("%d",&n2);
-int b[n2];
-int c[n1+n2];
-printf("enter the numbers of 2nd array:");
-for(i=0;i<n2;i++)
+void main()
 {
-scanf("%d",&b[i]);
-}
-for(i=0;i<n1;i++)
-{
-c[i]=a[i];
-
-}
-j=i;
-for(i=0;i<n2;i++)
-{
-c[j]=b[i];
-j++;
-}
-for(i=0;i<j;i++)
-{
-printf("%d ", &c[i]);
-}
-return 0;
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j = 1; j <= 4; j++)
+        {
+            if (i != 1 && i != 5)
+            {
+                if (j != 2 && j != 3)
+                    printf("*");
+                else
+                    printf(" ");
+            }
+            if (i != 2 && i != 3 && i != 4)
+            {
+                // for(int j=1;j<=4;j++)
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
 }
